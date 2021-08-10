@@ -12,4 +12,13 @@
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	pass
+	sum=0
+	digit_list=[]
+	digit_list.append(a)
+	digit_list.append(b)
+	digit_list.append(c)
+	mid_list = list(reversed(sorted(digit_list)))
+	ten_digits_list= list(reversed([10**j for j in range(len(mid_list))]))
+	for i in list(zip(mid_list,ten_digits_list)):
+		sum += i[0]*i[1]
+	return(sum)
