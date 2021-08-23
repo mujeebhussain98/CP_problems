@@ -5,4 +5,19 @@
 
 def nthautomorphicnumbers(n):
 	# Your code goes here
-	pass
+	c=1
+	k=1
+	while(c!=n):
+		if(isAutomorphic(k)):
+			c+=1
+		k+=1
+	return(k-1)
+
+def isAutomorphic(n):
+    p=pow(n,2)
+    while(n>0):
+        if(n%10!=p%10):
+            return(False)
+        n//=10
+        p//=10
+    return(True)
