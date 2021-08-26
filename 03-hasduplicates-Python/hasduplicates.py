@@ -5,4 +5,10 @@
 
 def hasduplicates(L):
 	# Your code goes here
-	pass
+	k=[]
+	for i in L:
+		k+=i
+	for j in k:
+		if(k.count(j)>1):
+			return(True)
+	return(False)
