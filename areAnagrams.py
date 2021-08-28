@@ -12,6 +12,20 @@
 
 def areAnagrams(s1, s2):
     # Your code goes here...
-    pass
+    s1=s1.lower()
+    s2=s2.lower()
+    if(len(s1)!=len(s2)):
+        return(False)
+    final_s1 = list(sorted(s1))
+    final_s2 = list(sorted(s2))
+    if("".join(final_s1)=="".join(final_s2)):
+        return(True)
+    else:
+        return(False)
 
 # write your test cases here...
+print(areAnagrams("Aba","BAA"))
+print(areAnagrams("Abc","CAB"))
+print(areAnagrams("Abac","ABCD"))
+print(areAnagrams("Abacd","ABCD"))
+print(areAnagrams("Abacd","ABCDa"))
