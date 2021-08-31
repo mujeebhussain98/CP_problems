@@ -15,7 +15,20 @@
 #     "The Shape of Water" : 3,
 #     "I, Tonya" : 1
 # }
-
 def movieAwards(oscarResults):
+    dic={}
+    for i in oscarResults:
+        dic[i[1]]=dic.get(i[1],0)+1
     # Your code goes here...
-    pass
+    return(dic)
+    
+
+print(movieAwards({ 
+    ("Best Picture", "The Shape of Water"), 
+    ("Best Actor", "Darkest Hour"),
+    ("Best Actress", "Three Billboards Outside Ebbing, Missouri"),
+    ("Best Director", "The Shape of Water"),
+    ("Best Supporting Actor", "Three Billboards Outside Ebbing, Missouri"),
+    ("Best Supporting Actress", "I, Tonya"),
+    ("Best Original Score", "The Shape of Water")
+}))
