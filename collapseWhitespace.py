@@ -16,7 +16,12 @@
 
 def cw(s):
     # Your code goes here...
-    return ""
+    k=s.split()
+    if(len(k)==3):
+        p=" ".join(k)
+        return(p+" ")
+    else:
+        return(" ".join(k))
 
 assert(cw("a\nb") == "a b")
 assert(cw("a\n   \t    b") == "a b")
