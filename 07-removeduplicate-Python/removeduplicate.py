@@ -5,4 +5,10 @@
 
 def removeduplicate(text):
 	# Your code goes here
-	pass
+	newtwxt = ""
+	for i in text:
+		if i in newtwxt:
+			pass
+		else:
+			newtwxt+=i
+	return newtwxt
