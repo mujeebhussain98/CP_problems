@@ -6,4 +6,9 @@
 
 
 def fun_get_kth_digit(digit, k):
-	return 0
+	s=[]
+	while(digit>0):
+		di = digit%10
+		s.append(di)
+		digit//=10
+	return(s[k])
